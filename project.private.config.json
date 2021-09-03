@@ -1,0 +1,30 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "name=tutu",
+          "scene": null
+        },
+        {
+          "name": "pages/cli/profile/profile",
+          "pathName": "pages/cli/profile/profile",
+          "query": "a=b",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

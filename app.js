@@ -1,4 +1,5 @@
 // app.js
+import 'base/Page'
 App({
   onLaunch() {
     // 展示本地存储能力
