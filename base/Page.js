@@ -36,7 +36,7 @@ export function enhancePage(options) {
             ...options,
             onLoad: function (onLoadOptions) {
                 console.log('enhancePage onLoad', onLoadOptions)
-                // originOnLoad && originOnLoad.apply(this, onLoadOptions)
+                // originOnLoad && originOnLoad.apply(this, arguments)
                 originOnLoad && originOnLoad.call(this, onLoadOptions)
             },
             onShow: function () {
