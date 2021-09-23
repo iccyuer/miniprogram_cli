@@ -2,24 +2,26 @@
 import 'base/Page'
 import util from './utils/util';
 import { $http } from './utils/http';
+import * as $wx from './utils/wxservice';
 import api from './config/api';
 App({
+    globalData: {
+        launched: false, // app 是否走完了onLaunch
+        scene: null, // 启动场景
+        shareTicket: null, // 分享来源
+        environment: null, // 企业微信环境
+        loginInfo: {
+            code: '' // wx.login的code
+        },
+        needUserinfo: false, // 是否需要用户信息(注册与否)
+        isIphoneX: false, // 是否是iphonex+
+        timeData: {
+            serverTimeout: null,
+            serverTime: 0,
+            diffTime: 0
+        }
+    },
     async onLaunch(options) {
-        // 展示本地存储能力
-        // const logs = wx.getStorageSync('logs') || []
-        // logs.unshift(Date.now())
-        // wx.setStorageSync('logs', logs)
-
-        // // 登录
-        // wx.login({
-        //     success: res => {
-        //         // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        //     }
-        // })
-
-
-
-
         /* -------- @1.app启动配置 -------- */
         let { scene, query } = options;
         console.log('optionsoptionsoptions', options)
@@ -51,22 +53,7 @@ App({
         }
 
     },
-    globalData: {
-        launched: false, // app 是否走完了onLaunch
-        scene: null, // 启动场景
-        shareTicket: null, // 分享来源
-        environment: null, // 企业微信环境
-        loginInfo: {
-            code: '' // wx.login的code
-        },
-        needUserinfo: false, // 是否需要用户信息(注册与否)
-        isIphoneX: false, // 是否是iphonex+
-        timeData: {
-            serverTimeout: null,
-            serverTime: 0,
-            diffTime: 0
-        }
-    },
+
     /**
  * 获取User
  */

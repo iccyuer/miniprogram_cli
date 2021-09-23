@@ -1,7 +1,7 @@
 const appid = 'wx696651506a7a12b7'
 const constant = {
     fileServer: "https://shandianfile.yunxiaoxin.net",
-    apiserver: "https://hainangolf-test.yunxiaoxin.net",
+    apiserver: "http://localhost:8094",
     downloadFileServe: 'https://shandianfile.yunxiaoxin.net'
 }
 
@@ -10,11 +10,11 @@ let urls = {
     auth: {
         authorize: {
             method: 'POST',
-            url: constant.apiserver + '/auth/wxa/hainangolf'
+            url: constant.apiserver + '/auth/wxa/tutu'
         },
         authorizev2: {
             method: 'POST',
-            url: constant.apiserver + '/auth/wxa/v2/hainangolf'
+            url: constant.apiserver + '/auth/wxa/v2/tutu'
         },
         updateuserinfo: {
             method: 'POST',
