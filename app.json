@@ -2,10 +2,9 @@
   "pages": [
     "pages/cli/index/index",
     "pages/cli/profile/profile",
+    "pages/cli/login/login",
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/cli/login",
-    "pages/cli/login/login"
+    "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",

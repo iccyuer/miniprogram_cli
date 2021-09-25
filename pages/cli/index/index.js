@@ -62,5 +62,9 @@ Page({
      */
     onShareAppMessage: function () {
 
+    },
+
+    go2login() {
+        wx.navigateTo({ url: '/pages/cli/login/login' });
     }
 })

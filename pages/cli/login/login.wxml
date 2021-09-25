@@ -1,2 +1,6 @@
 <!--pages/cli/login/login.wxml-->
-<text>pages/cli/login/login.wxml</text>
+<view>
+    <view>tutu</view>
+    <button type="primary" wx:if="{{canIuseUserProfile}}" bindtap="getUserProfile">微信用户一键登录</button>
+    <button type="primary" wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfoHandle">微信用户一键登录</button>
+</view>
