@@ -1,4 +1,5 @@
 // pages/cli/index/index.js
+import api from '../../../config/api';
 Page({
 
     /**
@@ -66,5 +67,14 @@ Page({
 
     go2login() {
         wx.navigateTo({ url: '/pages/cli/login/login' });
+    },
+
+    async testlogin() {
+        let params = {
+            username: 'abc',
+            password: '123'
+        }
+        let result = await wx.post(`${api.apiserver}/auth/user/login`, params);
+        console.log(result);
     }
 })
