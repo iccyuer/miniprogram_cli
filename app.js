@@ -60,7 +60,7 @@ App({
     async _refreshUserInfo() {
         console.log('into refresh user info');
         let obj = await wx.get(`${api.api.auth.userDetail.url}`);
-        let userDetail = formatUser(obj);
+        let userDetail = util.formatUser(obj);
         console.log('refresh user info done, user info is ', userDetail);
         wx.userInfo = userDetail;
         wx.setStorage({ key: 'user:detail', data: userDetail });
@@ -90,7 +90,7 @@ App({
                 console.log('expiretime is expired, wait to login');
             }
         }
-
+        console.log('needlogin',needlogin)
         if (needlogin) {
             await this._login();
         } else {
@@ -149,7 +149,7 @@ App({
         // eventTrack.setOpenid(openid);
         wx.token = res.token;
         wx.setStorage({ key: 'user:token', data: wx.token });
-        let userDetail = formatUser(res.userinfo);
+        let userDetail = util.formatUser(res.userinfo);
         wx.userInfo = userDetail;
         wx.setStorage({ key: 'user:detail', data: userDetail });
         let duration = 60 * 60 * 24 * 6 * 1000;

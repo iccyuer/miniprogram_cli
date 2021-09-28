@@ -38,7 +38,22 @@ function judgeModel(model) {
     }
 }
 
+/* 格式化User */
+function formatUser(User) {
+    let userDetail = {}
+    if (User) {
+        userDetail = Object.assign(
+            {},
+            User,
+            { passport: User.Passports }
+        )
+        delete userDetail.Passports
+    }
+    return userDetail;
+}
+
 module.exports = {
     formatTime,
-    judgeModel
+    judgeModel,
+    formatUser
 }

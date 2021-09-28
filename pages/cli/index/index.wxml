@@ -3,4 +3,6 @@
 <view class="" hover-class="none" hover-stop-propagation="false">
     <button type="primary" bindtap="go2login">跳转</button>
     <button type="primary" bindtap="testlogin">click me</button>
+    <button type="primary" bindtap="testapi">click me</button>
+    <button type="primary" bindtap="testapi2">click me</button>
 </view>

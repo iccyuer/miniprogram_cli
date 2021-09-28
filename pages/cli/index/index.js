@@ -76,5 +76,15 @@ Page({
         }
         let result = await wx.post(`${api.apiserver}/auth/user/login`, params);
         console.log(result);
-    }
+    },
+
+    async testapi() {
+        let result = await wx.get(`${api.apiserver}/auth/user/test`);
+        console.log(result);
+    },
+
+    async testapi2() {
+        let result = await wx.get(`${api.apiserver}/api/shop/list`);
+        console.log(result);
+    },
 })

@@ -35,9 +35,9 @@ export const $http = {
                                     content: `登陆凭证失效，重新获取中`,
                                     showCancel: false,
                                     success: async function() {
-                                        wx.removeStorageSync('user:token');
-                                        context._refreshUserInfo();
-                                        wx.startPullDownRefresh();
+                                        // wx.removeStorageSync('user:token');
+                                        // context._refreshUserInfo();
+                                        // wx.startPullDownRefresh();
                                     }
                                 });
                                 wx.hideLoading();

@@ -1,5 +1,6 @@
 // pages/cli/profile/profile.js
 import { enhancePage } from '../../../base/Page'
+import api from '../../../config/api';
 enhancePage({
 
     /**
@@ -26,8 +27,9 @@ enhancePage({
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow: function () {
-
+    onShow: async function () {
+        let result = await wx.get(`${api.apiserver}/auth/user/detail`);
+        console.log(result);
     },
 
     /**
