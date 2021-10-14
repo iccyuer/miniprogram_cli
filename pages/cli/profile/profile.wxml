@@ -1,2 +1,5 @@
 <!--pages/cli/profile/profile.wxml-->
 <text>pages/cli/profile/profile.wxml</text>
+<view class="" hover-class="none" hover-stop-propagation="false">
+    <button type="primary" bindtap="go2login">登录</button>
+</view>

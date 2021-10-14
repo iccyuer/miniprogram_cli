@@ -1,4 +1,5 @@
 // pages/cli/index/index.js
+const app = getApp()
 import api from '../../../config/api';
 Page({
 
@@ -13,7 +14,9 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        console.log('index',options)
+        console.log('index',options);
+        console.log('this', this);
+        console.log('app', app);
     },
 
     /**
@@ -65,10 +68,6 @@ Page({
 
     },
 
-    go2login() {
-        wx.navigateTo({ url: '/pages/cli/login/login' });
-    },
-
     async testlogin() {
         let params = {
             username: 'abc',
@@ -84,7 +83,7 @@ Page({
     },
 
     async testapi2() {
-        let result = await wx.get(`${api.apiserver}/api/shop/list`);
+        let result = await wx.get(`${api.apiserver}/api/ec/sku/list`);
         console.log(result);
     },
 })

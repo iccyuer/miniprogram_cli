@@ -4,6 +4,7 @@ import util from './utils/util';
 import { $http } from './utils/http';
 import * as $wx from './utils/wxservice';
 import api from './config/api';
+import { serverTimeConfig } from './config/config';
 App({
     globalData: {
         launched: false, // app 是否走完了onLaunch

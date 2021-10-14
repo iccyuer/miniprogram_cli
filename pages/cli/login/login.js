@@ -1,4 +1,5 @@
 // pages/cli/login/login.js
+const app = getApp()
 import api from '../../../config/api';
 Page({
 
@@ -91,22 +92,18 @@ Page({
                         }
                         let result = await wx.post(`${api.apiserver}/auth/user/updateinfo`, userInfo);
                         if (result.state != 'error') {
-                            await wepy.$instance._refreshUserInfo();
+                            await app._refreshUserInfo();
                             this.agreeStatus = false;
-                            wepy.$instance.globalData.needUserinfo = false;
+                            app.globalData.needUserinfo = false;
                             this.showUserInfo = false;
                             this.showMobile = !wx.userInfo.mobile;
-                            this.$apply();
                             //此处要判断是否goback
                             this.checkPage()
-                            this.$apply();
                         } else {
                             this.agreeStatus = false;
-                            this.$apply();
                         }
                     }
                     this.agreeStatus = false;
-                    this.$apply();
                 }
             })
         }

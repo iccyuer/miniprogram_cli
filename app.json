@@ -4,7 +4,8 @@
     "pages/cli/profile/profile",
     "pages/cli/login/login",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/cli/list/list"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -13,18 +14,22 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "backgroundColor": "#34BFA3",
+    "backgroundColor": "#ffffff",
     "borderStyle": "white",
-    "selectedColor": "#b9975b",
+    "selectedColor": "#3963BC",
     "color": "#000000",
     "list": [
       {
         "pagePath": "pages/cli/index/index",
-        "text": "首页"
+        "text": "首页",
+        "iconPath": "/images/tabbar/team.png",
+        "selectedIconPath": "/images/tabbar/team-select.png"
       },
       {
         "pagePath": "pages/cli/profile/profile",
-        "text": "我的"
+        "text": "我的",
+        "iconPath": "/images/tabbar/about.png",
+        "selectedIconPath": "/images/tabbar/about-select.png"
       }
     ]
   },
