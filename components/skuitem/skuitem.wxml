@@ -1,0 +1,17 @@
+<!--compnents/skuitem.wxml-->
+<view class="sku_list">
+    <navigator hover-class="none" url="{{'/pages/user/goods?id=' + item.id}}" id="{{item.id}}">
+        <image class="heading" src="{{fileserver+item.headimg}}?x-oss-process=image/resize,w_345,h_300/quality,q_70" lazy-load="true"></image>
+        <view class="mask_img" wx:if="{{item.stock_status === 'empty'}}">
+        <image src="../images/sell_all.png" class="sell_img"></image>
+        </view>
+        <view class="mask_img" wx:if="{{item.start_status === 2}}">
+        <image src="../images/sell_end.png" class="sell_img"></image>
+        </view>
+        <view class="time_start" wx:if="{{item.start_status === 3}}">{{item.full_start_time_str}}开售</view>
+        <text class="sku_name">{{item.sku_name}}</text>
+        <text class="font_small">¥</text>
+        <text class="price">{{item.price/100}}</text>
+        <text class="price_gray">¥{{item.default_price/100}}</text>
+    </navigator>
+</view>

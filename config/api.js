@@ -1,7 +1,7 @@
 const appid = 'wx696651506a7a12b7'
 const constant = {
-    fileServer: "https://shandianfile.yunxiaoxin.net",
-    apiserver: "http://localhost:8094",
+    fileServer: "https://ec-file.dawangtv.cn",
+    apiserver: "http://165.154.24.66",
     downloadFileServe: 'https://shandianfile.yunxiaoxin.net'
 }
 

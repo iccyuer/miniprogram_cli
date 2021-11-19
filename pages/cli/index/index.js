@@ -1,13 +1,14 @@
 // pages/cli/index/index.js
 const app = getApp()
+import { enhancePage } from '../../../base/Page'
 import api from '../../../config/api';
-Page({
+enhancePage({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+        skulist: []
     },
 
     /**
@@ -17,6 +18,7 @@ Page({
         console.log('index',options);
         console.log('this', this);
         console.log('app', app);
+        this.getSkuList()
     },
 
     /**
@@ -66,6 +68,14 @@ Page({
      */
     onShareAppMessage: function () {
 
+    },
+
+    async getSkuList() {
+        let result = await wx.get(`${api.apiserver}/api/ec/sku/list`);
+        this.setData({
+            skulist: result.rows
+        })
+        console.log(result);
     },
 
     async testlogin() {
